@@ -1,0 +1,1 @@
+<h4 class="text_center py-4"> <?php echo $info ?> </h4>
