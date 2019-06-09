@@ -20,7 +20,7 @@ $info = "Отчет врача $surname за март 2017";
 include 'print_info.php';
 ?>
 
-<div class="table-responsive">
+<div class="table-responsive py-4">
     <table class="center table">
         <thead>
             <tr>

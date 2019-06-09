@@ -9,14 +9,15 @@
 
 <body>
     <nav class="site-header py-1">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 mr-auto" href="/">На главную страницу</a>
-            <a class="py-2" href="/report?type=date">Отчет по дате</a>
-            <a class="py-2" href="/report?type=doctor">Отчет по врачам</a>
-            <a class="py-2" href="/oldest">Работает дольше всех</a>
-            <a class="py-2" href="/avg">Статистика по пациентам</a>
-            <a class="py-2" href="/laziest">Самые ленивые врачи</a>
-            <a class="py-2" href="/laziest_by_date">Самые ленивые врачи по дате</a>
+        <div class="container px-0 d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 px-1" href="/">На главную страницу</a>
+            <a class="py-2 px-1" href="/report?type=date">Отчет по дате</a>
+            <a class="py-2 px-1" href="/report?type=doctor">Отчет по врачам</a>
+            <a class="py-2 px-1" href="/oldest">Работает дольше всех</a>
+            <a class="py-2 px-1" href="/avg">Статистика по пациентам</a>
+            <a class="py-2 px-1" href="/laziest">Самые ленивые врачи</a>
+            <a class="py-2 px-1" href="/laziest_by_date">Самые ленивые врачи по дате</a>
+            <a class="py-2 px-1" href="/add_visit">Записаться на прием</a>
         </div>
     </nav>
     <div>
@@ -58,6 +59,10 @@
         }
         if (isset($_GET['laziest'])) {
             include 'laziest.php';
+            exit();
+        }
+        if (isset($_GET['add_visit'])) {
+            include 'add_visit.php';
             exit();
         }
         include 'print_background.html';
