@@ -1,6 +1,8 @@
 <?php
 
 if (!isset($_POST['send'])) {
+    $info = "Отчет врача за март 2017";
+    include 'print_info.php';
 	include 'report_by_surname.html';
 	exit();
 }

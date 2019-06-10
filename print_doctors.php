@@ -4,6 +4,7 @@
 			<tr>
 				<th>Имя</th>
 				<th>Фамилия</th>
+				<th>Специализация</th>
 				<th>Серия пасспорта</th>
 				<th>Номер пасспорта</th>
 				<th>Дата рождения</th>
@@ -18,6 +19,7 @@
 		<tr>
 			<td><?php echo $row["doc_name"]; ?></td>
 			<td><?php echo $row["doc_surname"]; ?></td>
+			<td><?php echo $row["doc_spec"]; ?></td>
 			<td><?php echo $row["doc_pass_series"]; ?></td>
 			<td><?php echo $row["doc_pass_id"]; ?></td>
 			<td><?php echo $row["doc_addres"]; ?></td>

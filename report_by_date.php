@@ -1,6 +1,8 @@
 <?php
 
 if (!isset($_POST['send'])) {
+	$info = "Отчет по количеству принятых пациентов каждым врачом";
+	include 'print_info.php';
 	include 'report_form_date.html';
 	exit();
 }
@@ -18,7 +20,7 @@ $stmt = $conn->prepare("
         GROUP BY s.doc_id, s.cab_num;");
 $stmt->execute(array(':date' => $date));
 $reports = $stmt->fetchAll();
-$info = "Отчет за $date";
+$info = "Отчет по количеству принятых пациентов каждым врачом за $date";
 include 'print_info.php';
 ?>
 <div class="table-responsive">
